@@ -1,3 +1,4 @@
+language: node_js
 sudo: required
 services:
   - docker
@@ -7,4 +8,3 @@ before_install:
 
 script:
   - docker run -it sdreger/test-react npm run test -- --coverage
-  
