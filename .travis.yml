@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t sdreger/test-react -f Dockerfile.dev .
+
+script:
+  - docker run -it sdreger/test-react npm run test -- --coverage
+  
